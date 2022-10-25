@@ -1,0 +1,24 @@
+.ResultsIcon {
+    height: 50px;
+}
+
+.NoLogoIcon {
+    height: 150px;
+    max-width: 200px;
+    max-width: 20vw;
+    margin: 0 10px;
+}
+
+.Selected {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.section-active {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-closed {
+    display: none;
+}
