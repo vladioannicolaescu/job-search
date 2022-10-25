@@ -107,17 +107,17 @@ function ResultsPageSection(props: {
         let start_index = 1;
         let end_index = PAGE_COUNT;
         
-        /* Show at most 9 pages at once */
-        if (PAGE_COUNT > 9) {
-            if (props.pageDetails.pageNo > 5) {
-                if (props.pageDetails.pageNo < PAGE_COUNT - 4) {
-                    start_index = props.pageDetails.pageNo - 4;
-                    end_index = props.pageDetails.pageNo + 4;
+        /* Show at most 7 pages at once */
+        if (PAGE_COUNT > 7) {
+            if (props.pageDetails.pageNo > 4) {
+                if (props.pageDetails.pageNo < PAGE_COUNT - 3) {
+                    start_index = props.pageDetails.pageNo - 3;
+                    end_index = props.pageDetails.pageNo + 3;
                 } else {
-                    start_index = PAGE_COUNT - 8;
+                    start_index = PAGE_COUNT - 6;
                 }
             } else {
-                end_index = 9;
+                end_index = 7;
             }
         }
 
@@ -233,7 +233,7 @@ function ResultsPageSection(props: {
                 <PagesSelector>
                     <h3>Select Page</h3>
                     <PagesSelectorContainer>
-                        <NextPageButton onClick={() => handlePageChange(FIRST_PAGE)}>First Page {'<<'}</NextPageButton>
+                        <NextPageButton className="PageIndicatorHidables" onClick={() => handlePageChange(FIRST_PAGE)}>First Page {'<<'}</NextPageButton>
                         <NextPageButton onClick={() => handlePageChange(PREV_PAGE)}>Prev {'<'}</NextPageButton>
                         {getPages().map(page => (
                             <NextPageButton
@@ -244,7 +244,7 @@ function ResultsPageSection(props: {
                             </NextPageButton>
                         ))}
                         <NextPageButton onClick={() => handlePageChange(NEXT_PAGE)}>{'>'} Next</NextPageButton>
-                        <NextPageButton onClick={() => handlePageChange(FINAL_PAGE)}>{'>>'} Last Page</NextPageButton>
+                        <NextPageButton className="PageIndicatorHidables" onClick={() => handlePageChange(FINAL_PAGE)}>{'>>'} Last Page</NextPageButton>
                     </PagesSelectorContainer>
                     <h3>Results per page: </h3>
                     <PageSizeSelector
