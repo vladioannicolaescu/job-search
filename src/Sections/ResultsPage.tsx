@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './resultsPage.css';
-import {PageContainer, PagesSelector, PagesSelectorContainer, PageSizeSelector, NextPageButton, ResultsContainer, TitleLine, ResultsList, ResultCard, CardContainer, CardContent, CardImage, CardContentText, EndLine, CardTitle, ButtonsContainer, PlainCardButton, CardButton} from '../components/SearchResults/Elements'; 
+import {PageContainer, PagesSelector, PagesSelectorContainer, PageSizeSelector, NextPageButton, ResultsContainer, TitleLine, ResultsList, ResultCard, CardContainer, CardContent, CardContentText, EndLine, CardTitle, ButtonsContainer, PlainCardButton, CardButton} from '../components/SearchResults/Elements'; 
 import { Footer, Copyright, TextLine } from '../components/Footer/Elements';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faCopyright, faCheckCircle, faContactCard } from '@fortawesome/free-regular-svg-icons';
